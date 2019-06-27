@@ -38,6 +38,7 @@ fn main() {
             proto_path.join("batch.proto").to_str().unwrap(),
             proto_path.join("transaction.proto").to_str().unwrap(),
             proto_path.join("events.proto").to_str().unwrap(),
+            proto_path.join("processor.proto").to_str().unwrap(),
             proto_path
                 .join("transaction_receipt.proto")
                 .to_str()
@@ -52,6 +53,6 @@ fn main() {
     // Create mod.rs accordingly
     let mut mod_file = File::create(dest_path.join("mod.rs")).unwrap();
     mod_file
-        .write_all(b"pub mod batch;\npub mod events;\npub mod transaction;\npub mod transaction_receipt;\npub mod merkle;\n")
+        .write_all(b"pub mod batch;\npub mod events;\npub mod transaction;\npub mod transaction_receipt;\npub mod merkle;\npub mod processor;\n")
         .unwrap();
 }

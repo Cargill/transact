@@ -19,7 +19,11 @@
 //!
 //! These structs cover the core protocols of the Transact system.  Batches of transactions are
 //! scheduled and executed.  The resuls of execution are stored in transaction receipts.
+extern crate codegen;
 
 pub mod batch;
 pub mod receipt;
 pub mod transaction;
+pub mod errors;
+pub mod builder;
+pub mod validator;
