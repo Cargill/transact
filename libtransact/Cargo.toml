@@ -50,8 +50,10 @@ experimental = [
     "contract-context-key-value",
     "key-value-state",
     "redis-db",
+    "sawtooth-signing-compat",
 ]
 sawtooth-compat = ["sawtooth-sdk"]
+sawtooth-signing-compat = ["sawtooth-sdk"]
 ursa-compat = ["ursa"]
 redis-db = ["redis"]
 contract = []
